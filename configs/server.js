@@ -4,8 +4,9 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import { dbConnection } from './mongo.js'
-import usuarioRoutes from '../src/usuarioAdmin/usuarioAd.routes.js'
 import authRoutes from '../src/auth/auth.routes.js'
+import usuarioRoutes from '../src/usuarioAdmin/usuarioAd.routes.js'
+import empresaRoutes from '../src/empresa/empresa.routes.js'
 
 class Server{
     constructor(){
@@ -13,6 +14,7 @@ class Server{
         this.port = process.env.PORT;
         this.authPath = "/coperex/v1/auth"
         this.userAdPath = "/coperex/v1/usuarioAd"
+        this.empresaPath = "/coperex/v1/empresa"
 
         this.middlewares();
         this.connectDB();
@@ -34,6 +36,7 @@ class Server{
     routes(){
         this.app.use(this.authPath, authRoutes);
         this.app.use(this.userAdPath, usuarioRoutes);
+        this.app.use(this.empresaPath, empresaRoutes);
     }
 
     listen(){

@@ -30,4 +30,4 @@ UsuarioAdSchema.methods.toJson = function(){
     return usuarioAd
 }
 
-export default mongoose.model('UsuarioAdSchema', UsuarioAdSchema);
+export default mongoose.model('Usuario', UsuarioAdSchema);
