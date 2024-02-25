@@ -1,7 +1,8 @@
 import { Router } from "express";
 import { check } from "express-validator";
 import { validarCampos } from "../middlewares/validar-campos.js";
-import { empresaPost } from "./empresa.controller.js";
+import { validarJwt } from "../middlewares/validar-jwt.js";
+import { actualizarEmpresa, anTrayectoriaE, empresaPost, empresas, obtenerExcel, ordenEmpresas } from "./empresa.controller.js";
 
 const router = Router();
 
@@ -15,5 +16,21 @@ router.post(
         check("categoriaEmpresarial", "La categoria empresarial no puede estar vacia").not().isEmpty(),
         validarCampos,
     ], empresaPost);
+
+router.get("/", empresas);
+
+router.get("/or", ordenEmpresas);
+
+router.get("/an", anTrayectoriaE);
+
+router.put(
+    "/:id",
+    [
+        validarJwt,
+        check("id", "No es un id valido").isMongoId(),
+        validarCampos,
+    ], actualizarEmpresa);
+
+router.get("/excel", obtenerExcel);
 
 export default router;

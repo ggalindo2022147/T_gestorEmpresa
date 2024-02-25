@@ -14,7 +14,7 @@ const EmpresaSchema = mongoose.Schema({
         required: [true, "El nivel de impacto es obligatorio"]
     },
     anTrayectoria:{
-        type: String,
+        type: Number,
         required: [true, "Los años de trayectoria son obligatorios"]
     },
     categoriaEmpresarial:{
