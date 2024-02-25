@@ -31,6 +31,9 @@ router.put(
         validarCampos,
     ], actualizarEmpresa);
 
-router.get("/excel", obtenerExcel);
+router.get(
+    "/excel",
+    validarJwt,
+    obtenerExcel);
 
 export default router;

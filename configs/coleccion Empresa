@@ -1,0 +1,139 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "coleccion Empresa",
+    "dateExported": "2024-02-25T19:21:47.112Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "d40d0f38-9c8a-482a-aa40-144ce0740a8d",
+            "colId": "fad94fee-66d2-4fdd-92b4-eaf06a0515fa",
+            "containerId": "",
+            "name": "post agregarEmpresa",
+            "url": "http://localhost:3000/coperex/v1/empresa",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-25T18:11:33.731Z",
+            "modified": "2024-02-25T18:53:46.920Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombreEmpresa\": \"Xetch\",\n  \"fundacionEmpresa\": 2001,\n  \"nivelImpacto\": \"Medio\",\n  \"anTrayectoria\": 15,\n  \"categoriaEmpresarial\": \"Tecnologia\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7e7e0ecf-b7ba-4c5c-86d7-beed75c1e116",
+            "colId": "fad94fee-66d2-4fdd-92b4-eaf06a0515fa",
+            "containerId": "",
+            "name": "get empresas",
+            "url": "http://localhost:3000/coperex/v1/empresa",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-25T18:24:52.304Z",
+            "modified": "2024-02-25T18:24:57.938Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6a6bd336-3f46-4876-bc7e-a81e04aa7d2b",
+            "colId": "fad94fee-66d2-4fdd-92b4-eaf06a0515fa",
+            "containerId": "",
+            "name": "get empresasOrdenadas_A-Z",
+            "url": "http://localhost:3000/coperex/v1/empresa/or",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-25T18:38:54.552Z",
+            "modified": "2024-02-25T18:40:47.853Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "90025ebd-3049-4ad6-bf53-aee888073407",
+            "colId": "fad94fee-66d2-4fdd-92b4-eaf06a0515fa",
+            "containerId": "",
+            "name": "get empresasEnExcel",
+            "url": "http://localhost:3000/coperex/v1/empresa/excel",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-25T19:14:56.289Z",
+            "modified": "2024-02-25T19:20:50.340Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRiOGNhZTc5NjJhYzY0MDA3ZDJkMTciLCJpYXQiOjE3MDg4ODcyMTcsImV4cCI6MTcwODg5MDgxN30.wIhwdkF-tiWdEkESsqULqH8INSpbmqYpZbAdzNq5oVU"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "575dca17-bef7-4d24-8622-bedc68b1c10b",
+            "colId": "fad94fee-66d2-4fdd-92b4-eaf06a0515fa",
+            "containerId": "",
+            "name": "get empresasOrdenadas_A-Z Copy",
+            "url": "http://localhost:3000/coperex/v1/empresa/or?order=desc",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-02-25T18:40:25.063Z",
+            "modified": "2024-02-25T18:40:25.063Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "order",
+                    "value": "desc",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "8f621193-9021-4b04-b0ff-2f4d6a8e3cc6",
+            "colId": "fad94fee-66d2-4fdd-92b4-eaf06a0515fa",
+            "containerId": "",
+            "name": "get empresasPorAñosdeT",
+            "url": "http://localhost:3000/coperex/v1/empresa/an?years=1",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-02-25T18:55:15.168Z",
+            "modified": "2024-02-25T18:56:08.729Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "years",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "8081623d-e860-4674-b5ff-beeb953af896",
+            "colId": "fad94fee-66d2-4fdd-92b4-eaf06a0515fa",
+            "containerId": "",
+            "name": "put actualizarEmpresa",
+            "url": "http://localhost:3000/coperex/v1/empresa/65db8cc391da9e3d1f526212",
+            "method": "PUT",
+            "sortNum": 60000,
+            "created": "2024-02-25T19:04:22.941Z",
+            "modified": "2024-02-25T19:07:02.776Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRiOGNhZTc5NjJhYzY0MDA3ZDJkMTciLCJpYXQiOjE3MDg4ODcyMTcsImV4cCI6MTcwODg5MDgxN30.wIhwdkF-tiWdEkESsqULqH8INSpbmqYpZbAdzNq5oVU"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"fundacionEmpresa\": 2000,\n  \"nivelImpacto\": \"Alto\",\n  \"anTrayectoria\": 20,\n  \"categoriaEmpresarial\": \"Tecnologia\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
