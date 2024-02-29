@@ -2,7 +2,7 @@ import { Router } from "express";
 import { check } from "express-validator";
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { validarJwt } from "../middlewares/validar-jwt.js";
-import { actualizarEmpresa, anTrayectoriaE, empresaPost, empresas, obtenerExcel, ordenEmpresas } from "./empresa.controller.js";
+import { actualizarEmpresa, anTrayectoriaE, categoriaEmpresarial, empresaPost, empresas, obtenerExcel, ordenEmpresas } from "./empresa.controller.js";
 
 const router = Router();
 
@@ -22,6 +22,8 @@ router.get("/", empresas);
 router.get("/or", ordenEmpresas);
 
 router.get("/an", anTrayectoriaE);
+
+router.get("/categoria", categoriaEmpresarial);
 
 router.put(
     "/:id",

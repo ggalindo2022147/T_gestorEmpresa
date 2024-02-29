@@ -61,6 +61,30 @@ export const anTrayectoriaE = async (req, res) => {
     });
 }
 
+export const categoriaEmpresarial = async (req, res) => {
+    const query = { estadoEmpresa: true };
+    const categoria = req.query.categoria ? { categoriaEmpresarial: req.query.categoria } : {};
+
+    if (req.query.categoria && (await Empresa.countDocuments({ ...query, ...categoria })) === 0) {
+        return res.status(400).json({
+            msg: "No se encontraron empresas para la categoría proporcionada, verifique que el nombre de la categoria esté bien escrito (tildes, mayúsculas, minúsculas)"
+        });
+    }
+
+    const [cantidadRegistradas, empresas] = await Promise.all([
+        Empresa.countDocuments({ ...query, ...categoria }),
+        Empresa.find({ ...query, ...categoria })
+    ]);
+
+    res.status(200).json({
+        msg: "Empresas coincidentes",
+        cantidadRegistradas,
+        empresas
+    });
+}
+
+
+
 export const actualizarEmpresa = async (req, res) => {
     const { id } = req.params;
     const { _id, nombreEmpresa, estadoEmpresa,...resto} = req.body;
