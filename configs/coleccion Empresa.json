@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "coleccion Empresa",
-    "dateExported": "2024-02-29T07:16:41.238Z",
+    "dateExported": "2024-02-29T07:22:05.812Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,8 +14,13 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-02-29T07:07:16.676Z",
-            "modified": "2024-02-29T07:07:16.676Z",
-            "headers": [],
+            "modified": "2024-02-29T07:20:38.902Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRiOGNhZTc5NjJhYzY0MDA3ZDJkMTciLCJpYXQiOjE3MDkxOTEyMjMsImV4cCI6MTcwOTE5NDgyM30.ofSy894NWsEInvvwzs76n8B8EY4ONenqi7AzXNIEIy8"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",
@@ -47,8 +52,13 @@
             "method": "GET",
             "sortNum": 30000,
             "created": "2024-02-29T07:07:16.679Z",
-            "modified": "2024-02-29T07:07:16.679Z",
-            "headers": [],
+            "modified": "2024-02-29T07:20:50.905Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRiOGNhZTc5NjJhYzY0MDA3ZDJkMTciLCJpYXQiOjE3MDkxOTEyMjMsImV4cCI6MTcwOTE5NDgyM30.ofSy894NWsEInvvwzs76n8B8EY4ONenqi7AzXNIEIy8"
+                }
+            ],
             "params": [],
             "tests": []
         },
@@ -80,8 +90,13 @@
             "method": "GET",
             "sortNum": 40000,
             "created": "2024-02-29T07:07:16.680Z",
-            "modified": "2024-02-29T07:07:16.680Z",
-            "headers": [],
+            "modified": "2024-02-29T07:21:04.003Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRiOGNhZTc5NjJhYzY0MDA3ZDJkMTciLCJpYXQiOjE3MDkxOTEyMjMsImV4cCI6MTcwOTE5NDgyM30.ofSy894NWsEInvvwzs76n8B8EY4ONenqi7AzXNIEIy8"
+                }
+            ],
             "params": [
                 {
                     "name": "order",
@@ -96,16 +111,21 @@
             "colId": "847f8b0e-97de-4a54-8e59-a64ad388b3bb",
             "containerId": "",
             "name": "get empresasPorAñosdeT",
-            "url": "http://localhost:3000/coperex/v1/empresa/an?years=1",
+            "url": "http://localhost:3000/coperex/v1/empresa/an?years=20",
             "method": "GET",
             "sortNum": 50000,
             "created": "2024-02-29T07:07:16.681Z",
-            "modified": "2024-02-29T07:07:16.681Z",
-            "headers": [],
+            "modified": "2024-02-29T07:21:29.988Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRiOGNhZTc5NjJhYzY0MDA3ZDJkMTciLCJpYXQiOjE3MDkxOTEyMjMsImV4cCI6MTcwOTE5NDgyM30.ofSy894NWsEInvvwzs76n8B8EY4ONenqi7AzXNIEIy8"
+                }
+            ],
             "params": [
                 {
                     "name": "years",
-                    "value": "1",
+                    "value": "20",
                     "isPath": false
                 }
             ],
@@ -140,16 +160,21 @@
             "colId": "847f8b0e-97de-4a54-8e59-a64ad388b3bb",
             "containerId": "",
             "name": "get categorias",
-            "url": "http://localhost:3000/coperex/v1/empresa/categoria?categoria=tecnologia",
+            "url": "http://localhost:3000/coperex/v1/empresa/categoria?categoria=Tecnologia",
             "method": "GET",
             "sortNum": 70000,
             "created": "2024-02-29T07:07:26.477Z",
-            "modified": "2024-02-29T07:15:02.933Z",
-            "headers": [],
+            "modified": "2024-02-29T07:21:47.461Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRiOGNhZTc5NjJhYzY0MDA3ZDJkMTciLCJpYXQiOjE3MDkxOTEyMjMsImV4cCI6MTcwOTE5NDgyM30.ofSy894NWsEInvvwzs76n8B8EY4ONenqi7AzXNIEIy8"
+                }
+            ],
             "params": [
                 {
                     "name": "categoria",
-                    "value": "tecnologia",
+                    "value": "Tecnologia",
                     "isPath": false
                 }
             ],

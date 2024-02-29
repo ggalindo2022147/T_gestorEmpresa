@@ -9,6 +9,7 @@ const router = Router();
 router.post(
     "/",
     [
+        validarJwt,
         check("nombreEmpresa", "El nombre de la empresa no puede estar vacio").not().isEmpty(),
         check("fundacionEmpresa", "El año de fundacion de la empresa no puede estar vacio").not().isEmpty(),
         check("nivelImpacto", "El nivel de impacto de la empresa no puede estar vacio").not().isEmpty(),
@@ -19,11 +20,11 @@ router.post(
 
 router.get("/", empresas);
 
-router.get("/or", ordenEmpresas);
+router.get("/or", validarJwt, ordenEmpresas);
 
-router.get("/an", anTrayectoriaE);
+router.get("/an", validarJwt, anTrayectoriaE);
 
-router.get("/categoria", categoriaEmpresarial);
+router.get("/categoria", validarJwt, categoriaEmpresarial);
 
 router.put(
     "/:id",
